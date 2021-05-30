@@ -8,7 +8,7 @@ import tensorflow_hub as hub
 import tensorflow_text  # pylint: disable=unused-import
 from sklearn.manifold import TSNE
 
-from timer import timer
+from .timer import timer
 
 
 USE_URL = 'https://tfhub.dev/google/universal-sentence-encoder-multilingual/3'

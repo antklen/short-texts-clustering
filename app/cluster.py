@@ -8,11 +8,11 @@ import numpy as np
 import pandas as pd
 import streamlit as st
 
-from cluster_stats import compute_cluster_stats, compute_dist_matrix
-from models import get_clustering_model, make_clustering_widgets
-from plot import (clusters_chart, plot_dist_matrix, plot_distance_histogram,
-                  plot_size_histogram)
-from timer import timer
+from .cluster_stats import compute_cluster_stats, compute_dist_matrix
+from .models import get_clustering_model, make_clustering_widgets
+from .plot import (clusters_chart, plot_dist_matrix, plot_distance_histogram,
+                   plot_size_histogram)
+from .timer import timer
 
 
 def make_clustering(session_state):

@@ -7,9 +7,9 @@ import plotly.express as px
 import streamlit as st
 from plotly import graph_objects as go
 
-from cluster_stats import compute_dist_matrix
-from embed import compute_2d, compute_embeddings, load_embedder
-from timer import timer
+from .cluster_stats import compute_dist_matrix
+from .embed import compute_2d, compute_embeddings, load_embedder
+from .timer import timer
 
 
 SIZE_POWER = 0.8

@@ -5,11 +5,11 @@ Main application.
 import pandas as pd
 import streamlit as st
 
-import SessionState
-from cluster import make_clustering
-from data import load_data
-from download import csv_download_link
-from embed import make_embeddings
+import app.SessionState as SessionState
+from app.cluster import make_clustering
+from app.data import load_data
+from app.download import csv_download_link
+from app.embed import make_embeddings
 
 
 st.set_page_config(page_title='Short texts clustering', layout='wide')

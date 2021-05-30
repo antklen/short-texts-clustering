@@ -5,7 +5,7 @@ Prepare data for clustering.
 import pandas as pd
 import streamlit as st
 
-from timer import timer
+from .timer import timer
 
 
 def load_data(session_state):

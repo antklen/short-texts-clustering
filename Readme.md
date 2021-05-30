@@ -2,7 +2,7 @@
 
 App for comparing different clustering methods on short texts consisting of one or several sentences. It can help to find appropriate clustering model and illustrates different ways of analyzing clustering results.
 
-![clustering demo](image.png)
+![clustering demo](images/image.png)
 
 Upload csv file with data, choose clustering algorithm and its parameters. Then app will use Universal Sentence Encoder to make text embeddings, run clustering and show results in different ways.
 
