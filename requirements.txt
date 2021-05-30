@@ -1,3 +1,4 @@
+diameter-clustering==0.0.1
 numpy==1.18.0
 pandas==1.2.4
 plotly==4.14.3
