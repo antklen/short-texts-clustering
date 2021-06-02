@@ -34,10 +34,11 @@ def clusters_chart(df, phrase_col='cluster_center',
     df = df.copy()
     df['x'] = embeddings_2d[:, 0]
     df['y'] = embeddings_2d[:, 1]
+    df = df[df.cluster_size > 1]
     fig = px.scatter(df, x='x', y='y', hover_name=hover_col,
                      size=np.power(df[size_col], SIZE_POWER),
                      hover_data=df.columns,
-                     color_discrete_sequence=px.colors.qualitative.Alphabet,
+                     color_discrete_sequence=['#7aaaf7'],
                      width=800, height=600)
     fig.layout.update(showlegend=False)
     st.plotly_chart(fig)
@@ -46,7 +47,7 @@ def clusters_chart(df, phrase_col='cluster_center',
 def plot_distance_histogram(max_distance, mean_distance):
     """Plot histograms for max and mean distances between point inside cluster."""
 
-    fig = px.histogram(max_distance, nbins=50,
+    fig = px.histogram(max_distance[max_distance > 0.01], nbins=50,
                        width=500, height=300,
                        title='Maximum distance')
     st.plotly_chart(fig)

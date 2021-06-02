@@ -18,7 +18,7 @@ def load_data(session_state):
 
     data_file = st.file_uploader('File with text data', type=['csv'])
     sample_size = st.number_input('Sample size', min_value=2,
-                                  max_value=10000, value=1000, step=1)
+                                  max_value=1000, value=500, step=1)
     load_data_button = st.button('Load data from file')
 
     if data_file is not None and load_data_button:
