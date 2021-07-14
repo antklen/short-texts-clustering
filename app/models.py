@@ -10,6 +10,7 @@ from sklearn.cluster import (DBSCAN, OPTICS, AffinityPropagation,
 
 
 def make_clustering_widgets(sidebar=False):
+    """Make widgets for selecting clustering algorithm and its parameters."""
 
     strmlit = st.sidebar if sidebar else st
 
@@ -51,11 +52,11 @@ def make_clustering_widgets(sidebar=False):
         clustering_params = {'min_samples': min_samples}
     elif clustering_algo == 'MaxDiameterClustering':
         max_distance = strmlit.number_input('Maximum cosine distance between points inside cluster',
-                                             min_value=0.01, max_value=2.0, value=0.5, step=0.01)
+                                            min_value=0.01, max_value=2.0, value=0.5, step=0.01)
         clustering_params = {'max_distance': max_distance}
     elif clustering_algo == 'LeaderClustering':
         max_radius = strmlit.number_input('Maximum radius of cluster in terms of cosine distance',
-                                             min_value=0.01, max_value=1.0, value=0.3, step=0.01)
+                                          min_value=0.01, max_value=1.0, value=0.3, step=0.01)
         clustering_params = {'max_radius': max_radius}
     elif clustering_algo == 'QTClustering':
         max_radius = strmlit.number_input('Maximum radius of cluster in terms of cosine distance',
@@ -70,6 +71,7 @@ def make_clustering_widgets(sidebar=False):
 
 
 def get_clustering_model(clustering_algo, params):
+    """Get clustering model with given parameters."""
 
     if clustering_algo == 'KMeans':
         model = KMeans(params['n_clusters'], random_state=42)

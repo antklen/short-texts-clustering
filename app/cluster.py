@@ -16,6 +16,7 @@ from .timer import timer
 
 
 def make_clustering(session_state):
+    """Run clustering and show results."""
 
     st.header('Clustering parameters')
     st.write("""Choose clustering algorithm and its parameters.
@@ -71,10 +72,13 @@ def make_clustering(session_state):
 
 @st.cache
 def run_model(model, data):
+    """Run clustering model."""
+
     return pd.Series(model.fit_predict(data))
 
 
 def show_cluster(session_state):
+    """Show info and phrases from single cluster."""
 
     st.header('Show cluster')
     st.write("""Show phrases and info for single cluster.""")
