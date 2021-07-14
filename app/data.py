@@ -26,10 +26,10 @@ def load_data(session_state):
 
             df = pd.read_csv(data_file)
 
-            if hasattr(df, 'phrases'):
-                phrases = df[['phrases']]
+            if hasattr(df, 'phrase'):
+                phrases = df['phrase']
             elif hasattr(df, 'text'):
-                phrases = df['text'].rename('phrases')
+                phrases = df['text'].rename('phrase')
             else:
                 st.error('Text data in file should be in column with name "text" or "phrase".')
                 return
