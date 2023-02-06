@@ -21,7 +21,7 @@ of points reflecting cluster size. It helps to quickly look at all clusters.
 ```sh
 pip install -r requirements.txt
 
-streamlit run streamplit_app.py
+streamlit run streamlit_app.py
 ```
 
 
